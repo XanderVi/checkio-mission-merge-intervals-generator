@@ -1,0 +1,28 @@
+<p>
+    You have a collection of intervals. You should merge overloped intervals.
+</p>
+
+<p>
+    <strong>Input: </strong> A list of tuples. Each tuple has two elements, both are int. The elements show beginning and ending of interval.
+</p>
+
+<p>
+    <strong>Output: </strong> A list of tuples, that has the same structure as input value.
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+<pre class="brush: python">
+    merge_intervals([(1, 4), (2, 6), (8, 10), (12, 19)]) == [(1, 6), (8, 10), (12, 19)]
+    merge_intervals([(1, 12), (2, 3), (4, 7)]) == [(1, 12)]
+</pre>
+</div>
+
+<p>
+    <strong>Precondition:</strong>
+    intervals are sorted inside the list by first element; the first element of interval is always bigger than the second one.
+</p>
