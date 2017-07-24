@@ -1,6 +1,6 @@
 def merge_intervals(intervals):
     """
-        You have a collection of intervals. You should merge overloped intervals.
+        Merge overloped intervals.
     """
     # Your code here
     return None
