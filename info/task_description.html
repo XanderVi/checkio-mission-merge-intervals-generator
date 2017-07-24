@@ -1,13 +1,13 @@
 <p>
-    You have a collection of intervals. You should merge overloped intervals.
+    You are given a collection of intervals, as tuples. It is your task to minimize the number of intervals by merging those that intersect.
 </p>
 
 <p>
-    <strong>Input: </strong> A list of tuples. Each tuple has two elements, both are int. The elements show beginning and ending of interval.
+    <strong>Input: </strong> A collection of intervals as a list of tuples.
 </p>
 
 <p>
-    <strong>Output: </strong> A list of tuples, that has the same structure as input value.
+    <strong>Output: </strong> The merged intervals as a list of tuples, sorted by their first element.
 </p>
 
 
@@ -24,5 +24,7 @@ merge_intervals([(1, 12), (2, 3), (4, 7)]) == [(1, 12)]
 
 <p>
     <strong>Precondition:</strong>
-    intervals are sorted inside the list by first element; the first element of interval can't be less than the second one.
+
+<pre>intervals == sorted(intervals, key=lambda x: x[0]) # you have sorted intervals
+interval[0] < interval[1] </pre>
 </p>
