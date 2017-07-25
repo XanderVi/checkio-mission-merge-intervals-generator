@@ -70,14 +70,14 @@ merge_intervals([(1, 5), (6, 10), (10, 15), (17, 20)]) == [(1, 15), (17, 20)]</p
     <li>intervals == sorted(intervals, key=lambda x: x[0])  # sorted by 1st element of
       the tuples
     </li>
-    <li>interval[0] < interval[1]</li>
+    <li>interval[0] <= interval[1]</li>
   </ul>
   {% else %}
   <ul>
     <li>intervals == sorted(intervals, key=lambda x: x[0])  # sorted by 1st element of
       the tuples
     </li>
-    <li>interval[0] < interval[1]</li>
+    <li>interval[0] <= interval[1]</li>
   </ul>
   {% endif %}
 </p>
