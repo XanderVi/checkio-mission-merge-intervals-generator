@@ -1,13 +1,18 @@
 "use strict";
 
-function sumTwo(a, b) {
-    return 0;
+function mergeIntervals(intervals) {
+    // Merge overlapped intervals.
+
+    // your code here
+
+    return [];
 }
 
 var assert = require('assert');
 
 if (!global.is_checking) {
-    assert.equal(sumTwo(3, 2), 5, "First")
-    assert.equal(sumTwo(5, 7), 12, "Second")
-    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
+    assert.deepEqual(mergeIntervals([[1, 4], [2, 6], [8, 10], [12, 19]]), [[1, 6], [8, 10], [12, 19]], "First")
+    assert.deepEqual(mergeIntervals([[1, 12], [2, 3], [4, 7]]), [[1, 12]], "Second")
+    assert.deepEqual(mergeIntervals([[1, 5], [6, 10], [10, 15], [17, 20]]), [[1, 15], [17, 20]], "Third")
+    console.log("Done! Go ahead and Check IT");
 }

@@ -12,34 +12,34 @@
 
 <p>
   <strong>An example:</strong><br>
-  Let's say you've got these 4 intervals: <em>(1,6), (3,5) (7,10), (9,12) and (14,16)</em>.
+  Let's say you've got these 5 intervals: <em>1..6, 3..5, 7..10, 9..12 and 14..16</em>.
   <ol>
     <li>
-      <em>(1,6) and (3,5)</em><br>
-      <em>(3,5)</em> fits into <em>(1,6)</em>, so <em>(3,5)</em> must disappear.
+      <em>1..6 and 3..5</em><br>
+      <em>3..5</em> fits into <em>1..6</em>, so <em>3..5</em> must disappear.
     </li>
     <li>
-      <em>(1,6) and (7,10)</em><br>
+      <em>1..6 and 7..10</em><br>
       Even though the intervals do not intersect, there can not be a value of type int
-      between them, so they have to be merged to the new interval <em>(1,10)</em>.
+      between them, so they have to be merged to the new interval <em>1..10</em>.
     </li>
     <li>
-      <em>(1,10) and (9,12)</em><br>
+      <em>1..10 and 9..12</em><br>
       These intervals do intersect, because <em>9 &lt; 10</em>,
-      so they have to be merged to the new interval <em>(1,12)</em>.
+      so they have to be merged to the new interval <em>1..12</em>.
     </li>
     <li>
-      <em>(1,12) and (14,16)</em><br>
+      <em>1..12 and 14..16</em><br>
       These two intervals do not intersect, so they must not be merged.
     </li>
   </ol>
   <strong>So the intervals to be returned are:</strong><br>
-  <em>(1,12) and (14,16)</em>
+  <em>1..12 and 14..16</em>
 </p>
 
 <p>
   <strong>Input:</strong>
-  A sequence of intervals as a list of tuples of 2 ints, sorted by their first element.
+  A sequence of intervals as a  {% if interpreter.slug == "js-node" %}Array of Arrays{% else %}list of tuples{% endif %} of 2 ints, sorted by their first element.
 </p>
 
 <p>
@@ -52,7 +52,10 @@
       <strong>Examples:</strong><br>
   </p>
   {% if interpreter.slug == "js-node" %}
-  <!-- TODO: add JS examples -->
+  <pre class="brush: python">
+mergeIntervals([[1, 4], [2, 6], [8, 10], [12, 19]]) == [[1, 6], [8, 10], [12, 19]]
+mergeIntervals([[1, 12], [2, 3], [4, 7]]) == [[1, 12]]
+mergeIntervals([[1, 5], [6, 10], [10, 15], [17, 20]]) == [[1, 15], [17, 20]]</pre>
   {% else %}
   <pre class="brush: python">
 merge_intervals([(1, 4), (2, 6), (8, 10), (12, 19)]) == [(1, 6), (8, 10), (12, 19)]
@@ -65,10 +68,8 @@ merge_intervals([(1, 5), (6, 10), (10, 15), (17, 20)]) == [(1, 15), (17, 20)]</p
 <p>
   <strong>Precondition:</strong><br>
   {% if interpreter.slug == "js-node" %}
-  <!-- TODO: change to JS equivalents -->
   <ul>
-    <li>intervals == sorted(intervals, key=lambda x: x[0])  # sorted by 1st element of
-      the tuples
+    <li>sorted by 1st element of the list
     </li>
     <li>interval[0] <= interval[1]</li>
   </ul>

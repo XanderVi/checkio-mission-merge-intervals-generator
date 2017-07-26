@@ -49,7 +49,6 @@ api.add_listener(
             "js": "mergeIntervals"
         },
         cover_code={
-            'python-3': cover_code,
-            'js-node': cover_codes.js_unwrap_args
+            'python-3': cover_code
         }
     ).on_ready)
