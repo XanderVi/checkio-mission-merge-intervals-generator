@@ -1,6 +1,6 @@
 def merge_intervals(intervals):
     """
-        Merge overloped intervals.
+        Merge overlapped intervals.
     """
     # Your code here
     return None
