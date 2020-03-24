@@ -1,9 +1,9 @@
 <p>
   You are given a sequence of intervals, as tuples of ints where the tuples are sorted by
   their first element in ascending order.<br>
-  It is your task to minimize the number of intervals by merging those that intersect or
-  by removing intervals fitting into another one.<br>
-In this mission you should use the 'yield' to make your function a generator.
+  Your task is to minimize the number of intervals by merging those that intersect or
+  by removing  those that are a part of other intervals.<br>
+In this mission you should use 'yield' to make your function a generator.
 </p>
 
 <p>
@@ -21,17 +21,16 @@ In this mission you should use the 'yield' to make your function a generator.
     </li>
     <li>
       <em>1..6 and 7..10</em><br>
-      Even though the intervals do not intersect, there can not be a value of type int
-      between them, so they have to be merged to the new interval <em>1..10</em>.
+      Even though the intervals don’t intersect, there isn’t an int type value between them, so they have to be merged with the new interval <em>1..10</em>.
     </li>
     <li>
       <em>1..10 and 9..12</em><br>
       These intervals do intersect, because <em>9 &lt; 10</em>,
-      so they have to be merged to the new interval <em>1..12</em>.
+      so they have to be merged with the new interval <em>1..12</em>.
     </li>
     <li>
       <em>1..12 and 14..16</em><br>
-      These two intervals do not intersect, so they must not be merged.
+      These two intervals don’t intersect, so they mustn’t be merged.
     </li>
   </ol>
   <strong>So the intervals to be returned are:</strong><br>
@@ -83,3 +82,5 @@ merge_intervals([(1, 5), (6, 10), (10, 15), (17, 20)]) == [(1, 15), (17, 20)]</p
   </ul>
   {% endif %}
 </p>
+
+
