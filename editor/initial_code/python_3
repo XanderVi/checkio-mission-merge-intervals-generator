@@ -7,7 +7,10 @@ def merge_intervals(intervals):
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert merge_intervals([(1, 4), (2, 6), (8, 10), (12, 19)]) == [(1, 6), (8, 10), (12, 19)], "First"
-    assert merge_intervals([(1, 12), (2, 3), (4, 7)]) == [(1, 12)], "Second"
-    assert merge_intervals([(1, 5), (6, 10), (10, 15), (17, 20)]) == [(1, 15), (17, 20)], "Third"
+    def test(functon, _input, _output):
+        assert list(functon(_input)) == _output, f"for {_input} we got {list(functon(_input))} but expected {_output}"
+    
+    test(merge_intervals, [(1, 4), (2, 6), (8, 10), (12, 19)], [(1, 6), (8, 10), (12, 19)])
+    test(merge_intervals, [(1, 12), (2, 3), (4, 7)], [(1, 12)])
+    test(merge_intervals, [(1, 5), (6, 10), (10, 15), (17, 20)], [(1, 15), (17, 20)])
     print('Done! Go ahead and Check IT')
